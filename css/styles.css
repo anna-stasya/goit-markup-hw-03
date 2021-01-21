@@ -38,18 +38,18 @@ ol {
 /* ======================== HEADER ========================*/
 
 .container {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  outline: 2px solid coral;
 }
 .hat {
   display: flex;
   align-items: center;
 }
-
-/*.main-nav {
-  align-items: center;
-}*/
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -126,26 +126,33 @@ ol {
 }
 
 /* ========================HERO ========================*/
-.hero-pic {
-  text-align: center;
-  margin-top: 0px;
-  padding-bottom: 94px;
-}
 
 .hero {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--background-footer); /*убрать потом*/
 }
+
+.hero-pic {
+  text-align: center;
+  align-content: center;
+  max-width: 694px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-title {
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /*text-align: center;*/
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--text-title-button-color);
-  background-color: var(--background-footer); /*убрать потом*/
 }
 
 /* ========================HERO-BUTTON ========================*/
@@ -153,6 +160,7 @@ ol {
 .hero-button {
   display: inline-block;
   border-radius: 4px;
+  border: none;
   padding: 10px 32px;
   min-width: 200px;
   font-family: inherit;
@@ -161,27 +169,26 @@ ol {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
-  /*text-align: center;*/
-  border: none;
-  /*border: 1px solid transparent*/
   color: var(--text-title-button-color);
   background-color: var(--button-hover-color);
 }
 
 /* ========================FEATURE ========================*/
 .section-feature {
-  /*margin-top: 0px;*/
-  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-.feature-list .desc {
-  width: 270px;
+.desc {
+  max-width: 270px;
+}
+
+.desc:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feature-list .title {
@@ -203,11 +210,16 @@ ol {
 /* ========================What are we doing ========================*/
 
 .section-scroll {
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .picture {
-  justify-content: space-between;
+  margin: -15px;
+}
+
+.picture-box {
+  margin: 15px;
 }
 
 .section-title {
@@ -215,7 +227,6 @@ ol {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  /*padding: 0;*/
   margin-top: 0px;
   margin-bottom: 50px;
 }
@@ -227,8 +238,19 @@ ol {
   padding-bottom: 94px;
 }
 
-.team-preview:not(:last-child) {
-  margin-right: 30px;
+.team {
+  display: flex;
+  margin: -15px;
+}
+
+.team-preview {
+  margin: 15px;
+  background-color: var(--text-title-button-color);
+}
+
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team .name {
@@ -236,7 +258,7 @@ ol {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
@@ -245,19 +267,17 @@ ol {
   text-align: center;
   color: var(--paragraph-color);
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 /* ========================PAGE PORTFILIO ========================*/
 /* ========================FILTER ========================*/
-.portfolio-section {
-}
 
 .filter {
+  padding-left: 280px;
   padding-top: 94px;
   padding-bottom: 16px;
-  margin-bottom: 34px;
-  justify-content: center;
+  min-width: 611px;
 }
 
 .gallery:not(:last-child) {
@@ -289,6 +309,7 @@ ol {
 /* ========================OBJECTS ========================*/
 
 .objects {
+  padding-top: 34px;
   display: flex;
   flex-wrap: wrap;
 
@@ -328,18 +349,12 @@ ol {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
-  /*padding: 0;
-  margin-top: 0px;
-  margin-bottom: 0px;*/
 }
 
 .objects .text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--paragraph-color);
-  /*padding: 0;
-  margin-top: 0px;
-  margin-bottom: 0px;*/
 }
 
 /* ========================FOOTER ========================*/
@@ -347,9 +362,9 @@ ol {
 .footer-background {
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--background-footer);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--background-footer);
 }
 
 .address {
@@ -371,7 +386,7 @@ ol {
   flex-direction: column;
 }
 
-.footer-contacts {
+.footer-contacts:not(:last-child) {
   margin-bottom: 9px;
 }
 
